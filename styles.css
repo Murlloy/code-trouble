@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #15181B;
+}
+
+button {
+    cursor: pointer;
+    transition: all ease 0.4s;
 }
 
 a {
@@ -16,11 +21,20 @@ h1 {
     font-family: "Montserrat", sans-serif;
 }
 
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #323538;
+}
+
+h2 {
+    font-size: 32px;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 header {
@@ -92,18 +106,18 @@ header article img {
 
 main {
     margin-top: 90px;
-    width: 100%;
+    width: 80%;
     padding: 100px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 140px;
+    gap: 5%;
     font-family: "Hind", sans-serif;
     position: relative;
 }
 
 main article {
-    max-width: 30%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -122,7 +136,7 @@ main section {
 }
 
 main img {
-    max-width: 25%;
+    max-width: 40%;
 }
 
 main h1 {
@@ -137,7 +151,7 @@ main span {
 }
 
 main button {
-    padding: 8px 80px;
+    padding: 8px 60px;
     background-color: #2DBA4F;
     color: white;
     border-radius: 8px;
@@ -169,10 +183,252 @@ main button:last-of-type {
     display: flex;
     align-items: center;
     position: relative;
+    max-width: 50%;
 }
 
 .card-dev {
     display: flex;
     flex-direction: column;
+    border-radius: 9px;
     padding: 20px;
+    padding-top: 60px;
+    position: relative;
+    gap: 22px;
+    width: 440px;
+    border: 3px solid #15181B;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.096);
+    background-color: #FAFCFE;
+}
+
+.card-dev div:first-of-type {
+    padding: 12px 20px;
+    background-color: #C6CCE6;
+    border-bottom: 3px solid #15181B;
+    border-radius: 9px 9px 0px 0px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.card-dev section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+    position: relative;
+    padding: 20px 0px;
+}
+
+.card-dev section img:last-of-type {
+    position: absolute;
+    right: 0;
+}
+
+.card-dev div h3, .card-dev section h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.card-dev h3 {
+    font-family: "Lora", serif;
+}
+
+.card-dev div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-dev div:nth-of-type(2) p {
+    padding: 8px 16px;
+    background-color: #323538;
+    color: #FAFCFE;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.card-dev div:nth-of-type(2) p:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.13);
+    transform: scale(1.05);
+}
+
+.card-dev div:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-dev div h3 {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.card-dev div button {
+    background-color: transparent;
+    border: 1px solid #3348A4;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-dev:nth-of-type(1) {
+    position: relative;
+    left: 100px;
+    top: 0px;
+}
+
+.card-dev:nth-of-type(2) {
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    z-index: -1;
+}
+
+.card-dev:nth-of-type(3) {
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    z-index: -2;
+
+}
+
+.dev article:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    justify-content: center;
+    max-width: 40%;
+    text-align: right;
+
+
+    & p {
+        font-family: "Hind", sans-serif;
+        font-size: 16px;
+    }
+}
+
+.dev article:last-of-type h2 {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dev article:last-of-type h2 span {
+    display: inline-flex;
+    background-color: #95A0D0;
+    height: 17px;
+    flex-direction: column-reverse;
+}
+
+.dev article:last-of-type h4 {
+    font-size: 24px;
+    font-family: "Lora", serif;
+}
+
+.dev article:last-of-type button {
+    width: 250px;
+    height: 45px;
+    color: white;
+    margin-right: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3348A4;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    padding: 60px;
+    align-items: center;
+    font-family: "Hind", sans-serif;
+}
+
+footer article {
+    display: flex;
+    width: 80%;
+    align-items: start;
+    justify-content: space-between;
+}
+
+footer article section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    min-width: 40%;
+}
+
+footer article section input {
+    width: 100%;
+    height: 44px;
+    background-color: #FAFCFE;
+    border: 1px solid #C7C7C7;
+    color: #C9C9C9;
+    padding-left: 15px;
+    border-radius: 8px;
+}
+
+footer button {
+    padding: 6px 16px;
+    background-color: #3348A4;
+    color: #FAFCFE;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+footer nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+footer a, footer p {
+    color: #C9C9C9;
+}
+
+footer a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+footer a img {
+    align-self: center;
+}
+
+footer strong {
+    color: #F8F9FA;
+    font-family: "Montserrat", sans-serif;
+}
+
+.footer-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer img {
+    align-self: start;
+    justify-self: start;
 }
