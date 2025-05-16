@@ -12,6 +12,77 @@ button {
     transition: all ease 0.4s;
 }
 
+.modal-header {
+    display: flex;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FAFCFE;
+    border: 1px solid black;
+    position: fixed;
+    top: 90px;
+    right: 0;
+    width: 250px;
+    height: 310px;
+    z-index: 2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.modal-header article {
+    width: 100%;
+    border-bottom: 1px solid #C7C7C7;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.modal-header img {
+    max-width: 20%;
+}
+
+.modal-header nav {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.modal-header strong {
+    color: #2DBA4F;
+    font-family: "Hind", sans-serif;
+    font-weight: normal;
+    font-size: 12px
+}
+
+.modal-header nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-header nav img {
+    align-self: center;
+    width: 20px;
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.modal-header article img:last-of-type {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 20px;
+}
+
 a {
     text-decoration: none;
 }
@@ -51,6 +122,24 @@ header {
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.082);
 }
 
+.user-header {
+    display: none;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 30px;
+    display: none;
+}
+
+header div section {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
 header nav {
     display: flex;
     gap: 15%;
@@ -88,7 +177,7 @@ header article {
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 25%;
 }
 
 header article input {
@@ -279,20 +368,20 @@ main button:last-of-type {
 
 .card-dev:nth-of-type(1) {
     position: relative;
-    left: 100px;
+    left: 20%;
     top: 0px;
 }
 
 .card-dev:nth-of-type(2) {
     position: absolute;
-    left: 45px;
+    left: 10%;
     top: 50px;
     z-index: -1;
 }
 
 .card-dev:nth-of-type(3) {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 100px;
     z-index: -2;
 
@@ -431,4 +520,126 @@ footer strong {
 footer img {
     align-self: start;
     justify-self: start;
+}
+
+@media (max-width: 900px) {
+
+    header article {
+        width: 40%;
+    }
+
+    header img {
+        max-width: 20%;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .buttons-header {
+        display: none;
+    }
+
+    header div {
+        display: flex;
+    }
+
+    .user-header {
+        display: flex;
+    }
+
+    main article {
+        max-width: 80%;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    main section {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .dev {
+        flex-direction: column-reverse;
+    }
+
+    .dev article:last-of-type {
+        max-width: 90%;
+    }
+
+    .dev article:last-of-type button {
+        align-self: center;
+    }   
+
+    .dev article:first-of-type {
+        max-width: 100%;
+        position: relative;
+        right: 10%;
+    }
+
+    .card-dev {
+        max-width: 400px;
+        gap: 15px;
+        max-height: 430px;
+        padding: 4%;
+        padding-top: 40px;
+    }
+
+    .card-dev h3 {
+        font-size: 14px;
+    }
+
+    .card-dev h2 {
+        font-size: 22px;
+    }
+
+    .card-dev p {
+        font-size: 10px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    footer article {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    footer article nav:nth-of-type(2) {
+        
+        & strong:first-of-type {
+            display: none;
+        }
+
+        & a {
+            display: none;
+        }
+
+        & div {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+        }
+
+
+    }
+
+    footer article section {
+        display: none
+    }
+
+    .modal-header.show {
+        display: flex;
+    }
+
+
 }
